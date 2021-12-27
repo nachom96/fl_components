@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// ListView básico
+
 class Listview1Screen extends StatelessWidget {
   // 1º Lista que será usada para crear un ListTile con cada elemento de ella
   final options = const [
@@ -23,8 +25,8 @@ class Listview1Screen extends StatelessWidget {
       body: ListView(
         children: [
           // 2º Creación de un Mapa con la lista (options) que será pasada a lista para usar sus elementos
-          // El .map es un  mapa que toma cada elemento de la lista options y lo transforma en lo que retorna la lambda. Al final hay que pasarlo a lista con el .tolist
           // Los tres puntos es un spread operator que sirve para extraer cada uno de los elementos para que así muestre dicho widget
+          // El .map es un  mapa que toma cada elemento de la lista options y lo transforma en lo que retorna la lambda. Al final hay que pasarlo a lista con el .tolist          
           ...options
               .map((game) => ListTile(
                     title: Text(game),

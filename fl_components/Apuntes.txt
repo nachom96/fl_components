@@ -1,0 +1,3 @@
+- ListView: 
+	- .builder se utiliza cuando se quiere crear una lista de manera perezosa
+	- .separated se utiliza cuando se quiere tener un builder y adicionalmente tener un widget de separación
