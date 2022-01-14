@@ -1,10 +1,10 @@
-1- Crear Snippet fl-screen (Para crear las pantallas escribiendo fl-screen)
-	
-	- En la paleta de comandos escribir: Configure User Snippets
+1- Crear Snippet fl-screen (Para crear las pantallas escribiendo fl-screen)	
+	- En la paleta de comandos (Ctrl+Shift+P) escribir: Configure User Snippets
 	- Seleccionar dart (o dart.json)
 	- Escribir lo del siguiente enlace (se puede quitar todo lo que hay
 en dart.json y sustituirlo por esto, por si no se ha usado dar.json antes
 	- https://gist.githubusercontent.com/Klerith/711749216f31996f1a7bf68c815d1385/raw/1a500928574570a7b56e8279520b353873dd0c55/dart-snippets.json
+	- Ahora se puede escribir fl-screen para crear una nueva clase más cómodamente
 
  
 2- Para ordenar (por ejemplo imports) alfabéticamente:
