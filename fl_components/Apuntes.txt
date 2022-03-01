@@ -1,3 +1,9 @@
 - ListView: 
 	- .builder se utiliza cuando se quiere crear una lista de manera perezosa
 	- .separated se utiliza cuando se quiere tener un builder y adicionalmente tener un widget de separación
+
+- El context sirve como una memoria de cómo está construido nuestra aplicación
+
+- Navigator.pushReplacement sirve para destruir la pantalla anterior a la que hemos navegado, se puede usar por ejemplo en un login
+
+- Método estático: Es una propiedad o método que se puede acceder sin necesidad de instanciar la clase
