@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_components/router/app_routes.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       // home: const CardScreen(),
       initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.routes,
+      routes: AppRoutes.getAppRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRoute,
     );
   }
