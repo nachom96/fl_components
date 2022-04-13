@@ -21,13 +21,13 @@ class Listview2Screen extends StatelessWidget {
         title: const Text(
           'Listview Tipo 2',
         ),
-        elevation: 0, // Quita el sombreado (o pone más, según el número)
-        backgroundColor: Colors.indigo,
+        // elevation: 0, // Quita el sombreado (o pone más, según el número)
         centerTitle: true,
       ),
       body: ListView.separated(
         itemCount: options.length,
-        itemBuilder: (context, index) => ListTile(  // El builder indica cómo se va a construir cada uno de los items          
+        itemBuilder: (context, index) => ListTile(
+          // El builder indica cómo se va a construir cada uno de los items
           title: Text(options[index]),
           trailing: const Icon(
             Icons.arrow_forward_ios_outlined,
@@ -38,8 +38,9 @@ class Listview2Screen extends StatelessWidget {
             print(game);
           },
         ),
-        separatorBuilder: (_, __) =>  // Separador, la barra espaciadora es porque no se va a utilizar ese argumento
-            const Divider(), 
+        separatorBuilder:
+            (_, __) => // Separador, la barra espaciadora es porque no se va a utilizar ese argumento
+                const Divider(),
       ),
     );
   }
