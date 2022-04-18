@@ -11,4 +11,9 @@ en dart.json y sustituirlo por esto, por si no se ha usado dar.json antes
 	- Seleccionas lo que quieras importar
 	- En la paleta de comandos (Ctrl + Shift + P) escribir sort y seleccionar Sort Lines Ascending
 
+
+3- Lorem Ipsum: 
+	- Descargar la extensión en File -> Preferences -> Lorem
+	- Para insertar una línea o párrafo, pulsar Ctrl + Shift + P y escribir 'Lorem'
+
 	
