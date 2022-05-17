@@ -38,7 +38,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         centerTitle: true,
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeOutCubic,
           width: _width,
           height: _height,
           decoration: BoxDecoration(
@@ -48,7 +50,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(
+        child: const Icon(
           Icons.play_circle_outline,
           size: 35,
         ),

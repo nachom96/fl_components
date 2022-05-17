@@ -7,3 +7,7 @@
 - Navigator.pushReplacement sirve para destruir la pantalla anterior a la que hemos navegado, se puede usar por ejemplo en un login
 
 - Método estático: Es una propiedad o método que se puede acceder sin necesidad de instanciar la clase
+
+- Diferencia entre TextField() y TextFormField() es que el TextField se utiliza cuando se necesita algo sin formulario que los agrupe, casi siempre se trabaja 
+con el TextFormField, ya que tiene más interacciones con un formulario.
+
