@@ -1,13 +1,22 @@
-- ListView: 
-	- .builder se utiliza cuando se quiere crear una lista de manera perezosa
-	- .separated se utiliza cuando se quiere tener un builder y adicionalmente tener un widget de separación
+General: 
 
-- El context sirve como una memoria de cómo está construido nuestra aplicación
+- El context sirve como una memoria de cómo está construido nuestra aplicación.
 
-- Navigator.pushReplacement sirve para destruir la pantalla anterior a la que hemos navegado, se puede usar por ejemplo en un login
-
-- Método estático: Es una propiedad o método que se puede acceder sin necesidad de instanciar la clase
+- Método estático: Es una propiedad o método que se puede acceder sin necesidad de instanciar la clase.
 
 - Diferencia entre TextField() y TextFormField() es que el TextField se utiliza cuando se necesita algo sin formulario que los agrupe, casi siempre se trabaja 
 con el TextFormField, ya que tiene más interacciones con un formulario.
 
+- width: double.infinity : Significa que tomará todo el ancho posible
+
+
+Widgets:
+
+- ListView: 
+	- .builder se utiliza cuando se quiere crear una lista de manera perezosa.
+	- .separated se utiliza cuando se quiere tener un builder y adicionalmente tener un widget de separación.
+
+- Navigator.pushReplacement sirve para destruir la pantalla anterior a la que hemos navegado, se puede usar por ejemplo en un login.
+
+- FadeInImage(), es una imagen que se suele usar para las imágenes de internet, permitiendo añadir un placeholder para que se muestre normalmente un gif (o imagen)
+que tendremos en nuestros assets el cual se mostrará hasta que se cargue la imagen requerida.
