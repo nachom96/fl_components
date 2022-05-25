@@ -38,6 +38,13 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     add5();
     isLoading = false;
     setState(() {});
+
+    if (scrollController.position.pixels + 100 <=
+        scrollController.position.maxScrollExtent) return;
+
+    scrollController.animateTo(scrollController.position.pixels + 120,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.fastOutSlowIn);
   }
 
   void add5() {
@@ -45,6 +52,15 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     // Coge el elemento final de imageIds le suma 1,2,3,4,5 y los añade.
     imageIds.addAll([1, 2, 3, 4, 5].map((e) => lastId + e));
     setState(() {});
+  }
+
+  // Método que limpia la lista de imageIds y luego crea 5 registros nuevos
+  Future<void> onRefresh() async {
+    await Future.delayed(const Duration(seconds: 2));
+    final lastId = imageIds.last;
+    imageIds.clear();
+    imageIds.add(lastId + 1);
+    add5();
   }
 
   @override
@@ -59,28 +75,33 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
         removeBottom: true,
         child: Stack(
           children: [
-            ListView.builder(
-              physics: const BouncingScrollPhysics(),
-              controller: scrollController,
-              itemCount: imageIds.length,
-              itemBuilder: (BuildContext context, int index) {
-                return FadeInImage(
-                    width: double.infinity,
-                    height: 300,
-                    fit: BoxFit
-                        .cover, // Toma todo el espacio que tiene la imagen
-                    placeholder: const AssetImage('assets/jar-loading.gif'),
-                    image: NetworkImage(
-                        'https://picsum.photos/500/300?image=${imageIds[index]}') // Obtiene el índice del array
-                    );
-              },
+            RefreshIndicator(
+              color: AppTheme.primary,
+              onRefresh: onRefresh,
+              child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                controller: scrollController,
+                itemCount: imageIds.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return FadeInImage(
+                      width: double.infinity,
+                      height: 300,
+                      fit: BoxFit
+                          .cover, // Toma todo el espacio que tiene la imagen
+                      placeholder: const AssetImage('assets/jar-loading.gif'),
+                      image: NetworkImage(
+                          'https://picsum.photos/500/300?image=${imageIds[index]}') // Obtiene el índice del array
+                      );
+                },
+              ),
             ),
             // En el left, coge la mitad del ancho del dispositivo (con el media query) y se le resta 30, ya que el ancho del container de LoadingIcon es 60
-            Positioned(
-              bottom: 40,
-              left: size.width * 0.5 - 30,
-              child: _LoadingIcon(),
-            )
+            if (isLoading)
+              Positioned(
+                bottom: 40,
+                left: size.width * 0.5 - 30,
+                child: const _LoadingIcon(),
+              )
           ],
         ),
       ),
