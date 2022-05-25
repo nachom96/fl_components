@@ -9,6 +9,8 @@ con el TextFormField, ya que tiene más interacciones con un formulario.
 
 - width: double.infinity : Significa que tomará todo el ancho posible
 
+- Container circular: decoration: BoxDecoration(shape: BoxShape.circle)
+
 
 Widgets:
 
