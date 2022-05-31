@@ -22,3 +22,6 @@ Widgets:
 
 - FadeInImage(), es una imagen que se suele usar para las imágenes de internet, permitiendo añadir un placeholder para que se muestre normalmente un gif (o imagen)
 que tendremos en nuestros assets el cual se mostrará hasta que se cargue la imagen requerida.
+
+- MediaQuery: 
+final size = MediaQuery.of(context).size; // Sirve para coger el tamaño según el dispositivo y lo guarda en la variable size, ejemplo en listview_builder_screen.dart
